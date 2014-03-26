@@ -1,0 +1,238 @@
+body, html {
+	background-color: rgb(120,120,120);
+	height: 100%;
+}
+
+#head {
+	background-image: url("https://dl.dropboxusercontent.com/u/68223368/IMG_0977.jpg");
+	height: 187px;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+
+#name {
+	font-family: Garamond;
+	font-size: 45px;
+	font-style: italic;
+	color: white;
+	text-align: right;
+	margin-right: 7px;
+	padding-top: 10px;
+}
+
+#information {
+	float: right;
+	background: rgb(100,100,100);
+	width: 310px;
+	height: 45px;
+	margin-right: 5px;
+	opacity: 0.9;
+	border-radius: 10px;
+	box-shadow: inset 0 0 15px rgb(0,0,0);
+	text-align: right;
+	padding-right: 10px;
+	padding-top: 3px;
+}
+
+#information > a {
+	text-decoration: none;
+	color: rgb(255,215,0);
+}
+
+#information > a:hover {
+	text-decoration: underline;
+}
+
+#information > a:nth-child(2) {
+	text-decoration: none;
+	color: rgb(255,128,0);
+}
+
+#information > a:nth-child(2):hover {
+	text-decoration: underline;
+}
+
+#linkedin {
+	clear: both;
+	float: right;
+	margin: 10px 5px;
+}
+
+#twitter {
+	float: right;
+	margin: 10px 3px;
+}
+
+#blog {
+	float: right;
+	margin: 10px 3px 1px;
+}
+
+#transition {
+	height: 5px;
+	background-color: black;
+	border-radius: 5px;
+	margin-top: 5px;
+}
+
+#work {
+	text-align: center;
+	font-family: Georgia;
+	letter-spacing: 5px;
+	font-size: 3em;
+}
+
+span {
+	font-family: courier;
+	font-size: .25em;
+	font-style: italic;
+	text-align: 
+}
+
+.title {
+	font-family: Tahoma;
+	font-size: 2em;
+	text-align: center;
+	margin-top: 30px;
+	color: rgb(0,0,200);
+	letter-spacing: 1px;
+}
+
+.button {
+	border-radius: 10px;
+	box-shadow: inset 0 0 10px rgb(0,0,0);
+	background-color: rgb(10,10,10);
+	height: 42px;
+	width: 120px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: -5px;
+}
+
+#web {
+	float: left;
+	width: 49%;
+	height: 90px;
+	background-color: rgb(15,15,15);
+	border-radius: 10px;
+	margin-top: -20px;
+}	
+
+#print{
+	float: right;
+	width: 49%;
+	height: 90px;
+	background-color: rgb(15,15,15);
+	border: 1px black solid;
+	border-radius: 10px;
+	margin-top: -20px;
+}
+
+#trail img {
+	float: left;
+	width: 49%;
+	margin-top: 10px;
+	box-shadow: 0px 0px 10px rgb(0,0,0);
+	background-color: black;
+	border: 1px solid black;
+	border-top-left-radius: 10px;
+}
+
+#trail_d {
+	float: left;
+	width: 49%;
+	font-style: italic;
+	font-family: Tahoma;
+	font-size: .75em;
+}
+
+p a {
+	text-decoration: none;
+	color: white;
+}
+
+#bb_d {
+	float: right;
+	width: 49%;
+	font-style: italic;
+	font-family: Tahoma;
+	font-size: .75em;
+	clear: right;
+}
+
+#bb img {
+	float: right;
+	width: 49%;
+	border-top-right-radius: 10px;
+	box-shadow: 0px 0px 10px rgb(0,0,0);
+	border: 1px solid black;
+	margin-top: 10px;
+	clear: right;
+}
+
+#roadtrip img {
+	float: left;
+	width: 49%;
+	border-top-left-radius: 10px;
+	margin-top: -30px;
+	box-shadow: 0px 0px 10px rgb(0,0,0);
+	clear: both;
+}
+
+#pop img {
+	float: right;
+	width: 49%;
+	margin-top: 20px;
+	border-top-right-radius: 10px;
+	box-shadow: 0px 0px 10px rgb(0,0,0);
+	clear: right;
+}
+
+#road_d {
+	float: left;
+	width: 49%;
+	font-style: italic;
+	font-family: Tahoma;
+	font-size: .75em;
+}
+
+#pop_d {
+	float: right;
+	width: 49%;
+	font-style: italic;
+	font-family: Tahoma;
+	font-size: .75em;
+	clear: right;
+	margin-bottom: 50px;
+}
+
+#email {
+	font-family: Garamond;
+	font-size: 1em;
+	color: rgb(50,50,50);
+	clear: both;
+	margin-top: 500px;
+}
+
+#transitiona {
+	height: 1px;
+	width: 100%;
+	margin-top: -15px;
+	background-color: black;
+	border-radius: 5px;
+	clear: both;
+}
+	
+
+#footer img{
+	margin-top: 10px;
+	margin-bottom: 3px;
+	width: 100%;
+	border-radius: 5px;
+}
+
+
+
+
+
+
