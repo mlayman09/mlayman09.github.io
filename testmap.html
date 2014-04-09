@@ -14,6 +14,38 @@
   #map { position:absolute; width:100%; height:85%; } 
   #text { height: 50%; width: 50%; background-color: red; }
   h1 {color: white; }
+  
+  #map-ui {
+  position:absolute;
+  top:175px;left:10px;
+  z-index:100;
+}
+#map-ui ul {
+  list-style:none;
+  margin:0;padding:0;
+}
+#map-ui a {
+  font-size:13px;
+  background:#FFF;
+  color:#3C4E5A;
+  display:block;
+  margin:0;padding:0;
+  border:1px solid #BBB;
+  border-bottom-width:0;
+  min-width:138px;
+  padding:10px;
+  text-decoration:none;
+}
+#map-ui a:hover { background:#ECF5FA; }
+#map-ui li:last-child a {
+  border-bottom-width:1px;
+  -webkit-border-radius:0 0 3px 3px;
+          border-radius:0 0 3px 3px;
+}
+#map-ui li:first-child a {
+  -webkit-border-radius:3px 3px 0 0;
+          border-radius:3px 3px 0 0;
+}
    
 </style>
 </head>
@@ -25,10 +57,33 @@
 	</div>
 </div>
 
+<Div id='map-ui'>
+  <Ul>
+    <Li><A href='#' id='1'>Arapahoe Basin</A></Li>
+    <Li><A href='#' id='2'>Beaver Creek</A></Li>
+    <Li><A href='#' id='3'>Breckenridge</A></Li>
+    <Li><A href='#' id='4'>Keystone</A></Li>
+    <Li><A href='#' id='5'>Vail</A></Li>
+  </Ul>
+</Div>
+
 <div id='map'></div>
+
 <script>
 var map = L.mapbox.map('map', 'mlayman09.g6a264p6')
     .setView([39.590060924153434, -106.2095200130716], 11);
+  var places = [
+    { place:'1', lat: 39.63073677585269, lon: -105.87080791359767, zoom:8 },
+    { place: '2', lat: -29.048035771630012, lon: 138.94015549263534, zoom:5 },
+    { place: '3', lat: -10.627526378678866, lon: 143.29847366360818, zoom:8 },
+    { place: '4', lat: 52.927285549508014, lon: 141.37194903886763, zoom:7 },
+    { place: '5', lat: 23.712405679249454, lon: 120.99472398981851, zoom:8 },
+  ];
+  places.forEach(function(item){
+      document.getElementById(item.place).onclick = function() {
+        map.ease.location({ lat: item.lat, lon: item.lon }).zoom(item.zoom || 7).optimal();
+      }
+  });
 </script>
 </body>
 </html>
