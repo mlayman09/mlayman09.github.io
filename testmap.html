@@ -1,23 +1,18 @@
 <!DOCTYPE html>
-<html>
-<head>
-<meta charset=utf-8 />
-<title>Skiing Map</title>
-
-<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no' />
-<script src='https://api.tiles.mapbox.com/mapbox.js/v1.6.2/mapbox.js'></script>
-<link href='https://api.tiles.mapbox.com/mapbox.js/v1.6.2/mapbox.css' rel='stylesheet' />
-
-<style>
-  html, body { margin:0; padding:0; height: 100%; }
-  #header { background-color: rgb(0,0,0); height:15%; width:100%; margin-top: -21px; }
-  #map { position:absolute; width:100%; height:85%; } 
-  #text { height: 50%; width: 50%; background-color: red; }
-  h1 {color: white; }
-  
-  #map-ui {
+<Html>
+<Head>
+<Meta charset=utf-8 />
+<Title></Title>
+  <Script src='http://api.tiles.mapbox.com/mapbox.js/v0.6.7/mapbox.js'></Script>
+  <Link href='http://api.tiles.mapbox.com/mapbox.js/v0.6.7/mapbox.css' rel='stylesheet' />
+<Style>
+html, body { margin:0; padding:0; height: 100%; }
+#header { background-color: rgb(0,0,0); height: 15%; width: 100%; margin-top: -21px; }
+#map { position:absolute; width:100%; height: 85% }
+#text { height: 50%; width: 50%; background-color: red; }
+#map-ui {
   position:absolute;
-  top:175px;left:10px;
+  bottom:25px;left:10px;
   z-index:100;
 }
 #map-ui ul {
@@ -46,14 +41,13 @@
   -webkit-border-radius:3px 3px 0 0;
           border-radius:3px 3px 0 0;
 }
-   
-</style>
-</head>
-<body>
+</Style>
+</Head>
+<Body>
 
 <div id = "header">
 	<div id = "text">
-		<h1>Skiing 2013-2104</h1>
+		<h1>Skiing 2013-2014</h1>
 	</div>
 </div>
 
@@ -66,24 +60,26 @@
     <Li><A href='#' id='5'>Vail</A></Li>
   </Ul>
 </Div>
-
-<div id='map'></div>
-
-<script>
-var map = L.mapbox.map('map', 'mlayman09.g6a264p6')
-    .setView([39.590060924153434, -106.2095200130716], 11);
+<Div id='map'></Div>
+<Script>
+  var map = mapbox.map('map');
+  var layer = mapbox.layer().id('mlayman09.g6a264p6');
+  map.addLayer(layer);
+  map.center({lat:39, lon:-106});
+  map.zoom(9);
   var places = [
-    { place:'1', lat: 39.63073677585269, lon: -105.87080791359767, zoom:8 },
-    { place: '2', lat: -29.048035771630012, lon: 138.94015549263534, zoom:5 },
-    { place: '3', lat: -10.627526378678866, lon: 143.29847366360818, zoom:8 },
-    { place: '4', lat: 52.927285549508014, lon: 141.37194903886763, zoom:7 },
-    { place: '5', lat: 23.712405679249454, lon: 120.99472398981851, zoom:8 },
+    { place:'1', lat: 39.63168151976773, lon: -105.87209544202778, zoom:14 },
+    { place: '2', lat: 39.59505053302351, lon: -106.52767024061177, zoom:13 },
+    { place: '3', lat: 39.4799755774087, lon: -106.07834658643696, zoom:14 },
+    { place: '4', lat: 39.57689522839631, lon: -105.94376406690571, zoom:13 },
+    { place: '5', lat: 39.60496025115105, lon: -106.3524898054311, zoom:13 },
   ];
   places.forEach(function(item){
       document.getElementById(item.place).onclick = function() {
         map.ease.location({ lat: item.lat, lon: item.lon }).zoom(item.zoom || 7).optimal();
+        return false;
       }
   });
-</script>
-</body>
-</html>
+</Script>
+</Body>
+</Html>
