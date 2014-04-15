@@ -15,6 +15,9 @@
 <body>
   <div id='map'></div>
   <script>
+  
+  var myLayer = L.mapbox.featureLayer().addTo(map);
+  
     var url = 'https://api.github.com/repos/mlayman09/mlayman09.github.io/contents/Travel.geojson';
     function load() {
       $.ajax({
@@ -27,21 +30,18 @@
         success: function(geojson) {
           var map = L.mapbox.map('map', 'mlayman09.map-81g3oy1j')
             .setView([39.67830463261529, -104.96197276865132], 4)
-            .markerLayer.setGeoJSON(geojson);
         }
       });
     }
   $(load);
 
   
-var layerOne = L.mapbox.featureLayer().addTo(map);
-layerOne.setGeoJSON(geojson);
+myLayer.setGeoJSON(geojson);  
 
-  
-layerOne.on('mouseover', function(e) {
+myLayer.on('mouseover', function(e) {
     e.layer.openPopup();
 });
-layerOne.on('mouseout', function(e) {
+myLayer.on('mouseout', function(e) {
     e.layer.closePopup();
 });
   
