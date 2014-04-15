@@ -34,14 +34,14 @@
   $(load);
 
   
-  var myLayer = L.mapbox.featureLayer().addTo(map);
+var layerOne = L.mapbox.featureLayer().addTo(map);
+layerOne.setGeoJSON(geojson);
 
   
-myLayer.setGeoJSON(geoJson);
-myLayer.on('mouseover', function(e) {
+layerOne.on('mouseover', function(e) {
     e.layer.openPopup();
 });
-myLayer.on('mouseout', function(e) {
+layerOne.on('mouseout', function(e) {
     e.layer.closePopup();
 });
   
