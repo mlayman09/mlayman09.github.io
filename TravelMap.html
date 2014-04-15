@@ -32,6 +32,10 @@
       });
     }
   $(load);
+
+  
+  var myLayer = L.mapbox.featureLayer().addTo(map);
+
   
 myLayer.setGeoJSON(geoJson);
 myLayer.on('mouseover', function(e) {
