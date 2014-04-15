@@ -26,15 +26,10 @@ var map = L.mapbox.map('map', 'mlayman09.map-tkhmz43c')
 var markerLayer = L.mapbox.featureLayer()
     .loadURL('Travel.geojson')
     .addTo(map);
+	onEachFeature: function (feature, layer) {
+         layer.bindPopup(feature.properties.name);
 
-markerLayer.setGeoJSON(markerLayer);
-	
-markerLayer.on('mouseover', function(e) {
-    e.layer.openPopup();
-});
-markerLayer.on('mouseout', function(e) {
-    e.layer.closePopup();
-});
+
 </script>
 </body>
 </html>
