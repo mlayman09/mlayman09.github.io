@@ -27,7 +27,7 @@ var markerLayer = L.mapbox.featureLayer()
     .loadURL('Travel.geojson')
     .addTo(map);
 
-markerLayer.setGeoJSON(geoJson);
+markerLayer.setGeoJSON(markerLayer);
 	
 markerLayer.on('mouseover', function(e) {
     e.layer.openPopup();
