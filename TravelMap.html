@@ -26,9 +26,8 @@ var map = L.mapbox.map('map', 'mlayman09.map-tkhmz43c')
 var markerLayer = L.mapbox.featureLayer()
     .loadURL('Travel.geojson')
     .addTo(map);
-	onEachFeature: function (feature, layer) {
-         layer.bindPopup(feature.properties.name);
-}
+	.bindPopup(name);
+
 
 </script>
 </body>
