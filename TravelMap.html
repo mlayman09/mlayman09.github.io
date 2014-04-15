@@ -32,6 +32,16 @@
       });
     }
   $(load);
+  
+myLayer.setGeoJSON(geoJson);
+myLayer.on('mouseover', function(e) {
+    e.layer.openPopup();
+});
+myLayer.on('mouseout', function(e) {
+    e.layer.closePopup();
+});
+  
+  
   </script>
 </body>
 </html>
