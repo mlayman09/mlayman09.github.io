@@ -24,7 +24,7 @@ var markerLayer = L.mapbox.featureLayer()
 	.loadURL('Travel.geojson')
 	.on('ready', function() {
 		markerLayer.eachLayer(function(layer) {
-			layer.bindPopup(layer.feature.properties.NAME);
+			layer.bindPopup(layer.feature.properties.NAME)
 			.autoPan(True);
 		});
 	})
