@@ -24,7 +24,7 @@ var markerLayer = L.mapbox.featureLayer()
 	.on('ready', function() {
 		map.fitBounds(markerLayer.getBounds());
 		markerLayer.eachLayer(function(layer) {
-			layer.bindPopup('<br></br>' + '<br syle=height: .1em />' + layer.feature.properties.NAME)
+			layer.bindPopup('<br></br>' + '<br syle="margin-top: 10px"/>' + layer.feature.properties.NAME)
 		});
 	})
 	.addTo(map);
