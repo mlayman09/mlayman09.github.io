@@ -23,6 +23,7 @@ var map = L.mapbox.map('map', 'mlayman09.map-tkhmz43c')
 var markerLayer = L.mapbox.featureLayer()
 	.loadURL('Travel.geojson')
 	.on('ready', function() {
+		map.fitBounds(runLayer.getBounds());
 		markerLayer.eachLayer(function(layer) {
 			layer.bindPopup(layer.feature.properties.NAME)
 		});
