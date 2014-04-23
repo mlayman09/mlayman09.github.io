@@ -25,6 +25,7 @@ var markerLayer = L.mapbox.featureLayer()
 	.on('ready', function() {
 		markerLayer.eachLayer(function(layer) {
 			layer.bindPopup(layer.feature.properties.NAME);
+			.autoPan(True);
 		});
 	})
 	.addTo(map);
