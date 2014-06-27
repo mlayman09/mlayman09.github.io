@@ -146,8 +146,7 @@ span {
 	font-size: .75em;
 }
 
-p>a {
-	text-decoration: none;
+#trail_d > a {
 	color: rgb(0,0,204);
 }
 
