@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<Html>
+<Head>
+<Meta charset=utf-8 />
+<Title></Title>
+  <Script src='http://api.tiles.mapbox.com/mapbox.js/v0.6.7/mapbox.js'></Script>
+  <Link href='http://api.tiles.mapbox.com/mapbox.js/v0.6.7/mapbox.css' rel='stylesheet' />
+<Style>
+html, body { margin:0; padding:0; height: 100%; }
+#map { position:absolute; width:100%; height: 100% }
+h1 {position: absolute; top: -10px; left: 10px; color: white; font-family: Arial; }
+#contact { position: absolute; bottom: -3px; right: 10px; z-index: 100}
+#contact p {font-family: Arial; font-size: 90%; color: white; font-style: italic; text-align: right; }
+#map-ui {
+  position:absolute; 
+  bottom:25px;left:10px;
+  z-index:100;
+}
+#map-ui ul {
+  list-style:none;
+  margin:0;padding:0;
+}
+#map-ui a {
+  font-size:15px;
+  font-family: Arial;
+  background: rgb(0,0,205);
+  color: rgb(255,255,255);
+  display:block;
+  margin:0;padding:0;
+  border:1px solid #BBB;
+  border-bottom-width:0;
+  min-width:138px;
+  padding:10px;
+  text-decoration:none;
+}
+#map-ui a:hover { background: rgb(0,0,0); }
+#map-ui li:last-child a {
+  border-bottom-width:1px;
+  -webkit-border-radius:0 0 3px 3px;
+          border-radius:0 0 3px 3px;
+}
+#map-ui li:first-child a {
+  -webkit-border-radius:3px 3px 0 0;
+          border-radius:3px 3px 0 0;
+}
+</Style>
+</Head>
+<Body>
+
+<Div id='map-ui'>
+  <Ul>
+    <Li><A href='#' id='1'>Arapahoe Basin</A></Li>
+    <Li><A href='#' id='2'>Copper Mountain</A></Li>
+    <Li><A href='#' id='3'>Crested Butte</A></Li>
+    <Li><A href='#' id='4'>Eldora</A></Li>
+	<Li><A href='#' id='5'>Loveland Ski Area</A></Li>
+    <Li><A href='#' id='6'>Winter Park</A></Li>
+  </Ul>
+</Div>
+<Div id='map'></Div>
+<Script>
+  var map = mapbox.map('map');
+  var layer = mapbox.layer().id('mlayman09.k7k6geph');
+  map.addLayer(layer);
+  map.centerzoom({lat:39.58573855671406, lon:-106.19601098878775}, 11);
+  map.zoom(9);
+  var places = [
+    { place: '1', lat: 39.63168151976773, lon: -105.87209544202778, zoom:14 },
+    { place: '2', lat: 39.47706, lon: -106.16347, zoom:13 },
+    { place: '3', lat: 38.89654, lon: -106.94422, zoom:14 },
+    { place: '4', lat: 39.93838, lon: -105.59276, zoom:13 },
+    { place: '5', lat: 39.67959, lon: -105.90994, zoom:13 },
+	{ place: '6', lat: 39.86615, lon: -105.77364, zoom:13 },
+  ];
+  places.forEach(function(item){
+      document.getElementById(item.place).onclick = function() {
+        map.ease.location({ lat: item.lat, lon: item.lon }).zoom(item.zoom || 7).optimal();
+        return false;
+      }
+  });
+</Script>
+
+<h1>Skiing 2014-2015</h1>
+
+<div id = "contact">
+	<p>Map by Matt Layman, MS-GISc student at the University of Denver </p>
+</div>
+
+</Body>
+</Html>
