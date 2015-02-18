@@ -1,3 +1,5 @@
+##arcpy script to convert a folder with gpx files into one KML file
+
 import arcpy
 arcpy.env.workspace = "C:/Users/Matt Layman/Downloads/activities"
 arcpy.env.overwriteOutput = True
