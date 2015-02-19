@@ -40,7 +40,26 @@ var style =
     '-torque-resolution: 2' +
     '}' +
     '#layer {' +
-    '  marker-width: 2;' +
+    '  marker-width: 5;' +
+    '  marker-fill-opacity: 1;' +
+    '  marker-fill: #77B2FF; ' +
+    '  comp-op: "lighten";' +
+    '  [value > 2] { marker-fill: #A0F4FF; }' +
+    '  [value > 7] { marker-fill: #FFFFFF; }' +
+    '  [frame-offset = 1] { marker-width: 10; marker-fill-opacity: 0.05;}' +
+    '  [frame-offset = 2] { marker-width: 20; marker-fill-opacity: 0.02;}' +
+    '}';
+	
+var styles =
+    'Map {' +
+    '-torque-time-attribute: "time";' +
+    '-torque-aggregation-function: "count(cartodb_id)";' +
+    '-torque-frame-count: 760;' +
+    '-torque-animation-duration: 30;' +
+    '-torque-resolution: 2' +
+    '}' +
+    '#layer {' +
+    '  marker-width: 10;' +
     '  marker-fill-opacity: 1;' +
     '  marker-fill: #77B2FF; ' +
     '  comp-op: "lighten";' +
@@ -66,7 +85,7 @@ var torqueLayer = new L.TorqueLayer({
 var torqueLayerx = new L.TorqueLayer({
     user: 'matthewlayman',
     table: 'matt_steamboat',
-    cartocss: style,
+    cartocss: styles,
     blendmode: 'lighter',
     // All Mapbox resources use HTTPS when available, so we'll need
     // to make torque do the same.
