@@ -36,7 +36,7 @@ var style =
     '-torque-time-attribute: "time";' +
     '-torque-aggregation-function: "count(cartodb_id)";' +
     '-torque-frame-count: 2048;' +
-    '-torque-animation-duration: 60;' +
+    '-torque-animation-duration: 160;' +
     '-torque-resolution: 2' +
     '}' +
     '#layer {' +
@@ -57,13 +57,15 @@ var styles =
     '-torque-time-attribute: "time";' +
     '-torque-aggregation-function: "count(cartodb_id)";' +
     '-torque-frame-count: 2048;' +
-    '-torque-animation-duration: 60;' +
+    '-torque-animation-duration: 160;' +
     '-torque-resolution: 2' +
     '}' +
     '#layer {' +
-    '  marker-width: 10;' +
+    '  marker-width: 5;' +
     '  marker-fill-opacity: 1;' +
-    '  marker-fill: #FFFFFF; ' +
+	'  marker-line-color: #FFF;' +
+	'  marker-line-opacity: 1;' +
+    '  marker-fill: #FFCC00; ' +
     '  comp-op: "lighten";' +
     '  [value > 2] { marker-fill: #A0F4FF; }' +
     '  [value > 7] { marker-fill: #FFFFFF; }' +
