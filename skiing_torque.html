@@ -14,6 +14,20 @@
 </head>
 <body>
 
+<div id='div'></div>
+<div>
+<ul>
+	<li>
+		<div class="bullet" style="color:yellow"></div>
+		Indy
+	</li>
+	<li>
+		<div class="bullet" style="color:red"></div>
+		Matt
+	</li>
+</ul>
+</div>
+
 <!-- torque requires underscore as a dependency -->
 <script src='//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js'></script>
 <!--
@@ -22,6 +36,7 @@
   See the full documentation at https://github.com/CartoDB/torque
   -->
 <script src='https://cartodb-libs.global.ssl.fastly.net/torque.full.js'></script>
+<div id = 'map'>
 <script>
 L.mapbox.accessToken = 'pk.eyJ1IjoiYW5kcmVhc3ZpZ2xha2lzIiwiYSI6IlVremRqN0kifQ.CFFJsLuWWyuhgsZTb51jWg';
 var map = L.mapbox.map('map', 'andreasviglakis.76e0cee7')
@@ -103,20 +118,6 @@ torqueLayer.play();
 torqueLayerx.addTo(map);
 torqueLayerx.play();
 </script>
-
-
-<div id='map'></div>
-<div>
-<ul>
-	<li>
-		<div class="bullet" style="color:yellow"></div>
-		Indy
-	</li>
-	<li>
-		<div class="bullet" style="color:red"></div>
-		Matt
-	</li>
-</ul>
 </div>
 
 
