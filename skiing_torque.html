@@ -9,7 +9,20 @@
 <style>
   html, body { margin:0; padding:0; height: 100%; }
   #map { position:absolute; width:100%; height: 100%;}
-  #legend { position: absolute; bottom: -3px; right: 10px; z-index: 100}
+  ul {
+    list-style-type: bullet;
+}
+ul > li {
+    color: yellow;
+}
+ul > li > span {
+    color: black;
+}
+
+ul > #matt {
+    color: red;
+}
+
 </style>
 </head>
 <body>
@@ -105,18 +118,17 @@ torqueLayerx.addTo(map);
 torqueLayerx.play();
 </script>
 
-<div id='legend'>
 <ul>
-	<li>
-		<div class="bullet" style="color:yellow"></div>
-		Indy
-	</li>
-	<li>
-		<div class="bullet" style="color:red"></div>
-		Matt
-	</li>
+    <li>
+        <span>Indy</span>
+    </li>
 </ul>
-</div>
+
+<ul>
+    <li id = "matt">
+        <span>Matt</span>
+    </li>
+</ul>
 
 </div>
 
