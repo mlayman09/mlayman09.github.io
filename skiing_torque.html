@@ -9,24 +9,10 @@
 <style>
   html, body { margin:0; padding:0; height: 100%; }
   #map { position:absolute; width:100%; height: 100%;}
-  #div { position: absolute; bottom: -3px; right: 10px; z-index: 100}}
+  #legend { position: absolute; bottom: -3px; right: 10px; z-index: 100}
 </style>
 </head>
 <body>
-
-<div id='div'></div>
-<div>
-<ul>
-	<li>
-		<div class="bullet" style="color:yellow"></div>
-		Indy
-	</li>
-	<li>
-		<div class="bullet" style="color:red"></div>
-		Matt
-	</li>
-</ul>
-</div>
 
 <!-- torque requires underscore as a dependency -->
 <script src='//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js'></script>
@@ -118,6 +104,20 @@ torqueLayer.play();
 torqueLayerx.addTo(map);
 torqueLayerx.play();
 </script>
+
+<div id='legend'>
+<ul>
+	<li>
+		<div class="bullet" style="color:yellow"></div>
+		Indy
+	</li>
+	<li>
+		<div class="bullet" style="color:red"></div>
+		Matt
+	</li>
+</ul>
+</div>
+
 </div>
 
 
