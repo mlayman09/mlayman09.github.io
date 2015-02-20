@@ -8,20 +8,21 @@
 <link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.5/mapbox.css' rel='stylesheet' />
 <style>
   html, body { margin:0; padding:0; height: 100%; }
-  #map { position:absolute; width:100%; height: 100%;}
-  ul {
+  #legend { div > ul {
     list-style-type: bullet;
 }
-ul > li {
+div > ul > li {
     color: yellow;
 }
-ul > li > span {
+div > ul > li > span {
     color: black;
 }
 
-ul > #matt {
+div > ul > #matt {
     color: red;
 }
+  #map { position:absolute; width:100%; height: 100%;}
+
 
 </style>
 </head>
@@ -118,6 +119,7 @@ torqueLayerx.addTo(map);
 torqueLayerx.play();
 </script>
 
+<div id = "legend">
 <ul>
     <li>
         <span>Indy</span>
@@ -129,6 +131,7 @@ torqueLayerx.play();
         <span>Matt</span>
     </li>
 </ul>
+</div>
 
 </div>
 
