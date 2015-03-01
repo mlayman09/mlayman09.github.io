@@ -65,10 +65,6 @@ h1 {position: absolute; top: -10px; left: 10px; color: white; font-family: Arial
   map.addLayer(layer);
   map.centerzoom({lat:39.88993855671406, lon:-106.19601098878775}, 11);
   map.zoom(9);
-  L.control.layers({
-	'Base map': L.mapbox.tileLayer('mlayman09.k7k6geph').addTo(map),
-	'Imagery': L.mapbox.tileLayer('mlayman09.lbi534bj')
-	}).addTo(map);
   var places = [
     { place: '1', lat: 39.65322, lon: -105.88455, zoom:13 },
     { place: '2', lat: 39.47706, lon: -106.16347, zoom:13 },
