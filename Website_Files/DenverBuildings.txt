@@ -1,0 +1,22 @@
+<Html>
+<Head>
+  <Link href='//api.tiles.mapbox.com/mapbox.js/v1.3.1/mapbox.css' rel='stylesheet' />
+  <!--[if lte IE 8]>
+    <link href='//api.tiles.mapbox.com/mapbox.js/v1.3.1/mapbox.ie.css' rel='stylesheet' />
+  <![endif]-->
+  <Script src='//api.tiles.mapbox.com/mapbox.js/v1.3.1/mapbox.js'></Script>
+  <Style>
+  #map {
+    width:600px;
+    height:400px;
+  }
+  </Style>
+</Head>
+<Body>
+  <Div id='map' class='dark'></Div>
+  <Script type='text/javascript'>
+  var map = L.mapbox.map('map', 'https://tiles.mapbox.com/mlayman09/edit/map-z6et9izc#16/39.7389/-104.9930')
+      .setView([37.9, -77], 5);
+  </Script>
+</Body>
+</Html>
