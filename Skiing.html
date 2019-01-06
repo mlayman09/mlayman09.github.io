@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8' />
+  <title>Display a map</title>
+  <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+  <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.49.0/mapbox-gl.js'></script>
+  <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.49.0/mapbox-gl.css' rel='stylesheet' />
+  <style>
+	html, body { margin:0; padding:0; height: 100%; }
+	
+	#map { position:absolute; width:100%; height: 100% }
+	
+	h1 {position: absolute; top: -1%; right: 1%; color: white; font-family: Arial; }
+	
+	#contact { position: absolute; bottom: -3px; right: 10px; z-index: 100}
+	
+	#contact p {font-family: Arial; font-size: 90%; color: white; font-style: italic; text-align: right; }
+	
+	#map-ui {
+	position:absolute; 
+	bottom:25px;left:10px;
+	z-index:100;
+	}
+	
+	#map-ui ul {
+		list-style:none;
+		margin:0;padding:0;
+	}
+	
+	#map-ui a {
+		font-size:15px;
+		font-family: Arial;
+		background: rgb(0,0,205);
+		color: rgb(255,255,255);
+		display:block;
+		margin:0;padding:0;
+		border:1px solid #BBB;
+		border-bottom-width:0;
+		min-width:138px;
+		padding:10px;
+		text-decoration:none;
+	}
+	
+	#map-ui a:hover { background: rgb(0,0,0); }
+	
+	#map-ui li:last-child a {
+		border-bottom-width:1px;
+		-webkit-border-radius:0 0 3px 3px;
+        border-radius:0 0 3px 3px;
+	}
+	
+	#map-ui li:first-child a {
+		-webkit-border-radius:3px 3px 0 0;
+        border-radius:3px 3px 0 0;
+	}
+	
+</style>
+</head>
+<body>
+
+<Div id='map-ui'>
+  <Ul>
+    <Li><A href='#' id='1'>Northern/Central Colorado</A></Li>
+	<Li><A href='#' id='2'>Central/Southern Colorado</A></Li>
+    <Li><A href='#' id='3'>New Mexico</A></Li>
+    <Li><A href='#' id='4'>Utah</A></Li>
+	<Li><A href='#' id='5'>Wyoming</A></Li>
+  </Ul>
+</Div>
+
+<div id='map'></div>
+
+<script>
+mapboxgl.accessToken = 'pk.eyJ1IjoibWxheW1hbjA5IiwiYSI6IlNwWE9kSU0ifQ.5VBFkEIevluT8l2GK3LtoA';
+const map = new mapboxgl.Map({
+  container: 'map',
+  style: 'mapbox://styles/mlayman09/cikgzdrru0040apm5bhqn0e3j',
+  center: [-107.177728, 39.186126],
+  zoom: 6
+});
+
+var places = [
+    { place: '1', lat: 39.896359, lon: -106.110112, zoom: 8 },
+    { place: '2', lat: 38.350829, lon: -107.100000, zoom: 8 },
+    { place: '3', lat: 36.579936, lon: -105.451838, zoom: 13 },
+    { place: '4', lat: 40.884255, lon: -111.762286, zoom: 8 },
+	{ place: '5', lat: 43.691054, lon: -110.897506, zoom: 10 },
+];
+
+places.forEach(function(item){
+	document.getElementById(item.place).addEventListener('click', function () {
+		map.flyTo({
+			center: [item.lon, item.lat],
+			speed: 0.8,
+			zoom: [item.zoom],
+			curve: 1
+		});
+	});
+});
+</script>
+
+<h1 style= "color:black">Skiing over the years</h1>
+
+</body>
+</html>
