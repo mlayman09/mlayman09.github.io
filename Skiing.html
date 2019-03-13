@@ -66,11 +66,12 @@
 <Div id='map-ui'>
   <Ul>
 	<Li><A href='#' id='0'>Click an area to zoom to:</A></Li>
-    <Li><A href='#' id='1'>Northern/Central Colorado</A></Li>
-	<Li><A href='#' id='2'>Central/Southern Colorado</A></Li>
-    <Li><A href='#' id='3'>New Mexico</A></Li>
-    <Li><A href='#' id='4'>Utah</A></Li>
-	<Li><A href='#' id='5'>Wyoming</A></Li>
+	<Li><A href='#' id='1'>Canada</A></Li>
+    <Li><A href='#' id='2'>Northern/Central Colorado</A></Li>
+	<Li><A href='#' id='3'>Central/Southern Colorado</A></Li>
+    <Li><A href='#' id='4'>New Mexico</A></Li>
+    <Li><A href='#' id='5'>Utah</A></Li>
+	<Li><A href='#' id='6'>Wyoming</A></Li>
   </Ul>
 </Div>
 
@@ -89,11 +90,12 @@ const map = new mapboxgl.Map({
 });
 
 var places = [
-    { place: '1', lat: 39.896359, lon: -106.110112, zoom: 8 },
-    { place: '2', lat: 38.350829, lon: -107.100000, zoom: 8 },
-    { place: '3', lat: 36.579936, lon: -105.451838, zoom: 13 },
-    { place: '4', lat: 40.884255, lon: -111.762286, zoom: 8 },
-	{ place: '5', lat: 43.691054, lon: -110.897506, zoom: 10 },
+	{ place: '1', lat: 50.00, lon: -115, zoom: 8 }
+    { place: '2', lat: 39.896359, lon: -106.110112, zoom: 8 },
+    { place: '3', lat: 38.350829, lon: -107.100000, zoom: 8 },
+    { place: '4', lat: 36.579936, lon: -105.451838, zoom: 13 },
+    { place: '5', lat: 40.884255, lon: -111.762286, zoom: 8 },
+	{ place: '6', lat: 43.691054, lon: -110.897506, zoom: 10 },
 ];
 
 places.forEach(function(item){
