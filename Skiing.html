@@ -11,12 +11,6 @@
 	
 	#map { position:absolute; width:100%; height: 100% }
 	
-	h1 {position: absolute; top: -1%; right: 1%; color: white; font-family: Arial; }
-	
-	#contact { position: absolute; bottom: -3px; right: 10px; z-index: 100}
-	
-	#contact p {font-family: Arial; font-size: 90%; color: white; font-style: italic; text-align: right; }
-	
 	#map-ui {
 	position:absolute; 
 	top:25px;left:10px;
@@ -59,11 +53,26 @@
         border-radius:3px 3px 0 0;
 	}
 	
+	#menu {
+		position:absolute; 
+		top: 5px; right: 5px;
+		z-index:100;
+		background: #fff;
+		border:1px solid #BBB;
+		border-radius: 15px 15px 15px 15px;
+		padding: 10px;
+		font-family: 'Open Sans', sans-serif;
+		color: black;
+		font-size: 8pt;
+	}
+	
 </style>
 </head>
 <body>
 
-<Div id='map-ui'>
+<div id = 'map'></div>
+
+<div id='map-ui'>
   <Ul>
 	<Li><A href='#' id='0'>Click an area to zoom to:</A></Li>
 	<Li><A href='#' id='1'>Canada</A></Li>
@@ -73,14 +82,20 @@
     <Li><A href='#' id='5'>Utah</A></Li>
 	<Li><A href='#' id='6'>Wyoming</A></Li>
   </Ul>
-</Div>
+</div>
 
-<div id='map'></div>
+<div id='menu'>
+	<input id='cikgzdrru0040apm5bhqn0e3j' type='radio' name='rtoggle' value='cikgzdrru0040apm5bhqn0e3j' checked='checked'>
+	<label for='Topo Map'>Topo Map</label>
+	<input id='ck0vhe3uk687i1cucq9t7nvdn' type='radio' name='rtoggle' value='ck0vhe3uk687i1cucq9t7nvdn'>
+	<label for='Satellite Imagery'>Satellite Imagery</label>
+</div>
 
 <script src="snowstorm.js">
 </script>
 
 <script>
+//create map object, and zoom to location UI
 mapboxgl.accessToken = 'pk.eyJ1IjoibWxheW1hbjA5IiwiYSI6IlNwWE9kSU0ifQ.5VBFkEIevluT8l2GK3LtoA';
 const map = new mapboxgl.Map({
   container: 'map',
@@ -108,6 +123,21 @@ places.forEach(function(item){
 		});
 	});
 });
+
+//basemap switcher
+var layerList = document.getElementById('menu');
+var inputs = layerList.getElementsByTagName('input');
+ 
+function switchLayer(layer) {
+var layerId = layer.target.id;
+map.setStyle('mapbox://styles/mlayman09/' + layerId);
+}
+ 
+for (var i = 0; i < inputs.length; i++) {
+inputs[i].onclick = switchLayer;
+}
+
+
 </script>
 
 </body>
