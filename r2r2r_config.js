@@ -39,7 +39,7 @@ var config = {
             image: 'r2r2r_images/River.jpg',
             description: 'Pitch black. That\'s what I remember about the first mile or two of our run. But gradually, as the sun angled it\'s way toward us, we began to see the canyon walls. Ambling down the trail we made sure to take plenty of photos and save our quads for later. 7 miles later we arrived at the Colorado River.',
             location: {
-                center: [-112.08770, 36.05800],
+                center: [-112.09770, 36.06800],
                 zoom: 14,
                 pitch: 20,
                 bearing: 0
