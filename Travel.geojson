@@ -3,6 +3,14 @@
 { "type": "Feature", "properties": { "NAME": "Lahaina, HI", "COUNTRY": "USA", "TYPE": "Town" }, "geometry": { "type": "Point", "coordinates": [ -156.679661462484603, 20.876420747196928 ] } },
 { "type": "Feature", "properties": { "NAME": "Hana, HI", "COUNTRY": "USA", "TYPE": "Town" }, "geometry": { "type": "Point", "coordinates": [ -155.986920463560864, 20.756320881925845 ] } },
 { "type": "Feature", "properties": { "NAME": "Haleakala National Park, HI", "COUNTRY": "USA", "TYPE": "National Park" }, "geometry": { "type": "Point", "coordinates": [ -156.232392924447538, 20.751660366217852 ] } },
-{ "type": "Feature", "properties": { "NAME": "Molokini Crater, HI", "COUNTRY": "USA", "TYPE": "Natural Feature" }, "geometry": { "type": "Point", "coordinates": [ -156.494565136582992, 20.63131649707206 ] } }
+{ "type": "Feature", "properties": { "NAME": "Molokini Crater, HI", "COUNTRY": "USA", "TYPE": "Natural Feature" }, "geometry": { "type": "Point", "coordinates": [ -156.494565136582992, 20.63131649707206 ] } },
+{ "type": "Feature", "properties": { "NAME": "Lafayette, IN", "COUNTRY": "USA", "TYPE": "Town" }, "geometry": { "type": "Point", "coordinates": [ -86.884381033779718, 40.418310788902339 ] } },
+{ "type": "Feature", "properties": { "NAME": "Wheaton, IL", "COUNTRY": "USA", "TYPE": "Town" }, "geometry": { "type": "Point", "coordinates": [ -88.106902678836335, 41.866216403939049 ] } },
+{ "type": "Feature", "properties": { "NAME": "Orland Park, IL", "COUNTRY": "USA", "TYPE": "Town" }, "geometry": { "type": "Point", "coordinates": [ -87.853330488158761, 41.630258057590758 ] } },
+{ "type": "Feature", "properties": { "NAME": "Palos Park, IL", "COUNTRY": "USA", "TYPE": "Town" }, "geometry": { "type": "Point", "coordinates": [ -87.830252365198447, 41.667397023679214 ] } },
+{ "type": "Feature", "properties": { "NAME": "Midlothian, IL", "COUNTRY": "USA", "TYPE": "Town" }, "geometry": { "type": "Point", "coordinates": [ -87.737022861848828, 41.630563728093549 ] } },
+{ "type": "Feature", "properties": { "NAME": "Evergreen Park, IL", "COUNTRY": "USA", "TYPE": "Town" }, "geometry": { "type": "Point", "coordinates": [ -87.702176424531274, 41.720278020661134 ] } },
+{ "type": "Feature", "properties": { "NAME": "Oak Park, IL", "COUNTRY": "USA", "TYPE": "Town" }, "geometry": { "type": "Point", "coordinates": [ -87.784783988394736, 41.884686303510371 ] } },
+{ "type": "Feature", "properties": { "NAME": "Tinley Park, IL", "COUNTRY": "USA", "TYPE": "Town" }, "geometry": { "type": "Point", "coordinates": [ -87.792551133245126, 41.572753317136225 ] } }
 ]
 }
